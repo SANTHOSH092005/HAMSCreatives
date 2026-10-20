@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from https://demoxml.com/html/montek-demo/ by HTTrack Website Copier/3.x [XR&CO], Tue, 20 Oct 2026 04:07:05 GMT -->
+<head>
+<meta charset="utf-8">
+<title>HAMS Creatives | Homepage</title>
+<!-- Stylesheets -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+<link href="../../../fonts.googleapis.com/css2eeaf.css?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="assets/images/favicon.jpeg" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.jpeg" type="image/x-icon">
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<style>
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+}
+
+/* ==========================================================================
+   ScrollSmoother Viewport & Content Structural Layout
+   ========================================================================== */
+#smooth-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#smooth-content {
+    width: 100%;
+    overflow: visible;
+}
+
+/* Fixed Header & Navigation on top of transformed layers */
+.main-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.mobile-menu {
+    z-index: 1000;
+}
+
+/* Ensure banner acts as the relative positioning boundary */
+.banner-one {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Full overlay across landing page banner with transparent background and difference blend for inversion */
+.sphere-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: transparent !important;
+    pointer-events: none;
+    mix-blend-mode: difference; /* Inverts color when intersecting white elements */
+}
+
+canvas#nebula-canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: transparent !important;
+}
+
+/* Banner content layout */
+.banner-one .auto-container,
+.banner-one_content,
+.robot {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-one_heading {
+    position: relative;
+    color: #ffffff;
+    user-select: none;
+}
+
+.banner-one a,
+.banner-one button {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ScrollSmoother Wrappers -->
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <div class="page-wrapper">
+            <!-- Main Header -->
+            <header class="main-header">
+                
+                <!-- Header Lower -->
+                <div class="header-lower">
+                    <div class="auto-container">
+                        <div class="inner-container">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                
+                                <div class="logo-box">
+                                    <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+                                </div>
+                                
+                                <div class="nav-outer d-flex flex-wrap">
+                                    <!-- Main Menu -->
+                                    <nav class="main-menu navbar-expand-md">
+                                        <div class="navbar-header">
+                                            <!-- Toggle Button -->      
+                                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                            <ul class="navigation clearfix">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                                <!-- Mobile Navigation Toggler -->
+                                <div class="mobile-nav-toggler">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Header Lower-->
+                
+                <!-- Mobile Menu  -->
+                <div class="mobile-menu">
+                    <div class="menu-backdrop"></div>
+                    <div class="close-btn"><span class="icon fa-solid fa-xmark fa-fw"></span></div>
+                    
+                    <nav class="menu-box">
+                        <div class="nav-logo"><a href="index.html"><img src="assets/images/mobile-logo.png" alt="" title=""></a></div>
+                        <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+                    </nav>
+                </div>
+                <!-- End Mobile Menu -->
+            
+            </header>
+            <!-- End Main Header -->
+            
+            <!-- Banner One -->
+            <section class="banner-one" style="background-image:url(assets/images/background/1.jpg)">
+                
+                <!-- 3D Inverting Particle Sphere Canvas Layer -->
+                <div class="sphere-container">
+                    <canvas id="nebula-canvas"></canvas>
+                </div>
+
+                <div class="robot">
+                    <script type="module" src="../../../unpkg.com/%40splinetool/viewer%401.3.5/build/spline-viewer.js"></script>
+                    <spline-viewer url="https://prod.spline.design/AqtlWJlNbO-ZMkvz/scene.splinecode"></spline-viewer>
+                </div>
+                <div class="auto-container">
+                    <!-- Content Column -->
+                    <div class="banner-one_content">
+                        <div class="banner-one_content-inner">
+                            <h1 class="banner-one_heading">HAMS <br> Creatives</h1>
+                            <div class="lower-box d-flex justify-content-between align-items-center flex-wrap">
+                                <div class="banner-one_text">Futuristic VFX · 3D Design <br> Creative Technology </div>
+                                <div class="banner-one_text-two">We craft immersive digital experiences that <br> transcend reality.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Banner One -->
+
+            <!-- Services One -->
+            <section class="services-one">
+                <div class="auto-container">
+                    <!-- Sec Title -->
+                    <div class="sec-title">
+                        <h2 class="sec-title_heading">Services</h2>
+                        <div class="sec-title_icon"><img src="assets/images/icons/icon-1.png" alt="" /></div>
+                    </div>
+                    <div class="row clearfix">
+                        
+                        <!-- Service Block One -->
+                        <div class="service-block_one col-lg-6 col-md-6 col-sm-12">
+                            <div class="service-block_one-inner d-flex justify-content-between align-items-center flex-wrap">
+                                <h3 class="service-block_one-heading">Visual <br> Effects</h3>
+                                <div class="service-block_one-icon">
+                                    <img src="assets/images/icons/service-1.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Service Block One -->
+                        <div class="service-block_one col-lg-6 col-md-6 col-sm-12">
+                            <div class="service-block_one-inner d-flex justify-content-between align-items-center flex-wrap">
+                                <h3 class="service-block_one-heading">3D & <br> Design</h3>
+                                <div class="service-block_one-icon">
+                                    <img src="assets/images/icons/service-2.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Service Block One -->
+                        <div class="service-block_one col-lg-6 col-md-6 col-sm-12">
+                            <div class="service-block_one-inner d-flex justify-content-between align-items-center flex-wrap">
+                                <h3 class="service-block_one-heading">Motion <br> Design</h3>
+                                <div class="service-block_one-icon">
+                                    <img src="assets/images/icons/service-3.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Service Block One -->
+                        <div class="service-block_one col-lg-6 col-md-6 col-sm-12">
+                            <div class="service-block_one-inner d-flex justify-content-between align-items-center flex-wrap">
+                                <h3 class="service-block_one-heading">Creative <br> Tech</h3>
+                                <div class="service-block_one-icon">
+                                    <img src="assets/images/icons/service-4.png" alt="" />
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End Services One -->
+            
+            <!-- Gallery One -->
+            <section class="gallery-one">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        
+                        <!-- Gallery Block One -->
+                        <div class="gallery-block_one col-lg-4 col-md-6 col-sm-12">
+                            <div class="gallery-block_one-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="gallery-block_one-content">
+                                    <div class="gallery-block_one-image">
+                                        <a href="#"><img src="assets/images/gallery/1.png" alt="" /></a>
+                                    </div>
+                                    <div class="gallery-block_one-title">Programs</div>
+                                    <h4 class="gallery-block_one-heading"><a href="single-work.html">VFX</a></h4>
+                                </div>
+                                <div class="service-block_one-more">
+                                    <a class="view-more" href="contact.html">Enroll Now !</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gallery Block One -->
+                        <div class="gallery-block_one col-lg-4 col-md-6 col-sm-12">
+                            <div class="gallery-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="gallery-block_one-content">
+                                    <div class="gallery-block_one-image">
+                                        <a href="#"><img src="assets/images/gallery/2.png" alt="" /></a>
+                                    </div>
+                                    <div class="gallery-block_one-title">Programs</div>
+                                    <h4 class="gallery-block_one-heading"><a href="single-work.html">Graphic Designing</a></h4>
+                                </div>
+                                <div class="service-block_one-more">
+                                    <a class="view-more" href="contact.html">Enroll Now !</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gallery Block One -->
+                        <div class="gallery-block_one col-lg-4 col-md-6 col-sm-12">
+                            <div class="gallery-block_one-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="gallery-block_one-content">
+                                    <div class="gallery-block_one-image">
+                                        <a href="#"><img src="assets/images/gallery/3.png" alt="" /></a>
+                                    </div>
+                                    <div class="gallery-block_one-title">Programs</div>
+                                    <h4 class="gallery-block_one-heading"><a href="single-work.html">3D Modeling & Texturing</a></h4>
+                                </div>
+                                <div class="service-block_one-more">
+                                    <a class="view-more" href="contact.html">Enroll Now !</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gallery Block One -->
+                        <div class="gallery-block_one col-lg-4 col-md-6 col-sm-12">
+                            <div class="gallery-block_one-inner wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="gallery-block_one-content">
+                                    <div class="gallery-block_one-image">
+                                        <a href="#"><img src="assets/images/gallery/4.png" alt="" /></a>
+                                    </div>
+                                    <div class="gallery-block_one-title">Programs</div>
+                                    <h4 class="gallery-block_one-heading"><a href="single-work.html">Animation (2D & 3D)</a></h4>
+                                </div>
+                                <div class="service-block_one-more">
+                                    <a class="view-more" href="contact.html">Enroll Now !</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gallery Block One -->
+                        <div class="gallery-block_one col-lg-4 col-md-6 col-sm-12">
+                            <div class="gallery-block_one-inner wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="gallery-block_one-content">
+                                    <div class="gallery-block_one-image">
+                                        <a href="#"><img src="assets/images/gallery/5.png" alt="" /></a>
+                                    </div>
+                                    <div class="gallery-block_one-title">Programs</div>
+                                    <h4 class="gallery-block_one-heading"><a href="single-work.html">Motion Graphics</a></h4>
+                                </div>
+                                <div class="service-block_one-more">
+                                    <a class="view-more" href="contact.html">Enroll Now !</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Gallery Block One -->
+                        <div class="gallery-block_one col-lg-4 col-md-6 col-sm-12">
+                            <div class="gallery-block_one-inner wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                <div class="gallery-block_one-content">
+                                    <div class="gallery-block_one-image">
+                                        <a href="#"><img src="assets/images/gallery/6.png" width="100" alt="" /></a>
+                                    </div>
+                                    <div class="gallery-block_one-title">Programs</div>
+                                    <h4 class="gallery-block_one-heading"><a href="journal-detail.html">UI/UX Design</a></h4>
+                                </div>
+                                <div class="service-block_one-more">
+                                    <a class="view-more" href="contact.html">Enroll Now !</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End Gallery One -->
+            
+            <!-- Journal One -->
+            <section class="journal-one" style="background-image:url(assets/images/background/2.jpg)">
+                <div class="auto-container">
+                    <!-- Sec Title -->
+                    <div class="sec-title">
+                        <h2 class="sec-title_heading">What We Offer</h2>
+                        <div class="sec-title_icon"><img src="assets/images/icons/icon-2.png" alt="" /></div>
+                    </div>
+                    <div class="row clearfix">
+                        
+                        <!-- journal Block One -->
+                        <div class="journal-block_one">
+                            <div class="journal-block_one-inner">
+                                <div class="journal-block_one-title">HAMS Gives</div>
+                                <h5 class="journal-block_one-heading"><a href="journal-detail.html">Master industry tools</a></h5>
+                                <a href="contact.html" class="journal-block_one-arrow fa-solid fa-arrow-right fa-fw"></a>
+                            </div>
+                        </div>
+                        
+                        <!-- journal Block One -->
+                        <div class="journal-block_one">
+                            <div class="journal-block_one-inner">
+                                <div class="journal-block_one-title">HAMS Gives</div>
+                                <h5 class="journal-block_one-heading"><a href="journal-detail.html">Hands-on <br> learning</a></h5>
+                                <a href="contact.html" class="journal-block_one-arrow fa-solid fa-arrow-right fa-fw"></a>
+                            </div>
+                        </div>
+                        
+                        <!-- journal Block One -->
+                        <div class="journal-block_one">
+                            <div class="journal-block_one-inner">
+                                <div class="journal-block_one-title">HAMS Gives</div>
+                                <h5 class="journal-block_one-heading"><a href="journal-detail.html">Learn like a <br> pro</a></h5>
+                                <a href="contact.html" class="journal-block_one-arrow fa-solid fa-arrow-right fa-fw"></a>
+                            </div>
+                        </div>
+                        
+                        <!-- journal Block One -->
+                        <div class="journal-block_one">
+                            <div class="journal-block_one-inner">
+                                <div class="journal-block_one-title">HAMS Gives</div>
+                                <h5 class="journal-block_one-heading"><a href="journal-detail.html">Build real <br> skills</a></h5>
+                                <a href="contact.html" class="journal-block_one-arrow fa-solid fa-arrow-right fa-fw"></a>
+                            </div>
+                        </div>
+                        
+                        <!-- journal Block One -->
+                        <div class="journal-block_one">
+                            <div class="journal-block_one-inner">
+                                <div class="journal-block_one-title">HAMS Gives</div>
+                                <h5 class="journal-block_one-heading"><a href="journal-detail.html">Professional software training</a></h5>
+                                <a href="contact.html" class="journal-block_one-arrow fa-solid fa-arrow-right fa-fw"></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End Journal One -->
+                
+            <!-- Stats One -->
+            <section class="stats-one" style="background-image:url(assets/images/background/3.jpg)">
+                <div class="auto-container">
+                    <!-- Sec Title -->
+                    <div class="sec-title">
+                        <h2 class="sec-title_heading">Stats</h2>
+                        <div class="sec-title_icon"><img src="assets/images/icons/icon-4.png" alt="" /></div>
+                    </div>
+                    <div class="inner-container">
+                        <div class="clearfix">
+                            
+                            <!-- Counter Column -->
+                            <div class="counter-block_one col-lg-4 col-md-6 col-sm-6">
+                                <div class="counter-block_one-inner wow flipInX" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="counter-block_one-counter"><span class="odometer" data-count="235"></span>9+</div>
+                                    <div class="counter-block_one-text">finished projects</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Counter Column -->
+                            <div class="counter-block_one col-lg-4 col-md-6 col-sm-6">
+                                <div class="counter-block_one-inner wow flipInX" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="counter-block_one-counter"><span class="odometer" data-count="25"></span>4+</div>
+                                    <div class="counter-block_one-text">team members</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Counter Column -->
+                            <div class="counter-block_one col-lg-4 col-md-6 col-sm-6">
+                                <div class="counter-block_one-inner wow flipInX" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="counter-block_one-counter"><span class="odometer" data-count="138">26</span>+</div>
+                                    <div class="counter-block_one-text">happy customers</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Counter Column -->
+                            <div class="counter-block_one col-lg-4 col-md-6 col-sm-6">
+                                <div class="counter-block_one-inner wow flipInX" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="counter-block_one-counter"><span class="odometer" data-count="42">2</span>+</div>
+                                    <div class="counter-block_one-text">loyal partners</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Counter Column -->
+                            <div class="counter-block_one col-lg-4 col-md-6 col-sm-6">
+                                <div class="counter-block_one-inner wow flipInX" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="counter-block_one-counter"><span class="odometer" data-count="15628">999</span>+</div>
+                                    <div class="counter-block_one-text">cofee drinked</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Counter Column -->
+                            <div class="stats-one_contact-column col-lg-4 col-md-6 col-sm-6">
+                                <div class="stats-one_contact-inner wow flipInX" data-wow-delay="0ms" data-wow-duration="1500ms">
+                                    <div class="stats-one_contact-content">
+                                        <a href="contact.html">
+                                        <div class="stats-one_contact-icon fa-regular fa-paper-plane fa-fw"></div>
+                                        <h3>contact</h3>
+                                        <div class="text">get a quote for your project</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Stats One -->
+            
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="auto-container">
+                    <!-- Widgets Section -->
+                    <div class="widgets-section">
+                        <div class="row clearfix">
+                            
+                            <!-- Footer Column -->
+                            <div class="footer-column col-lg-8 col-md-12 col-sm-12">
+                                <div class="footer-text">Let's grab some coffee. <br> We're nestled in the heart of a bustling metropolis <br> but occasionally venture to the tranquil countryside</div>
+                                <h2>Interested in working with us? <a href="mailto:hello@Montek-template.io">hello@hamscreatives.studio</a></h2>
+                                <ul class="footer_socials">
+                                    <li><a href="https://www.linkedin.com/in/hamscreatives/?isSelfProfile=false">Facebook <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                    <li><a href="https://www.instagram.com/hams_creatives?obrf=ejF0NjRlOXBrYTcz&utm_source=qr">Instagram <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Footer Column -->
+                            <div class="footer-column col-lg-4 col-md-12 col-sm-12">
+                                <ul class="footer_navs">
+                                    <li><a href="index.html">Home <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                    <li><a href="about.html">About <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                    <li><a href="contact.html">Contact <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="auto-container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <div class="footer_copyright">&copy; 2026 HAMS Creatives  -  Made by CTRL Developer's</div>
+                            <a class="backtop down-box scroll-to-target" data-target=".page-wrapper">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Main Footer -->
+            
+        </div>
+        <!-- End PageWrapper -->
+
+    </div>
+    <!-- End Smooth Content -->
+</div>
+<!-- End Smooth Wrapper -->
+
+<!-- Scripts -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/odometer.js"></script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/ScrollToPlugin.min.js"></script>
+<script src="assets/js/ScrollSmoother.min.js"></script>
+<script src="assets/js/script.js"></script>
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<!-- ScrollSmoother Initialization Script -->
+<script>
+window.addEventListener("load", function () {
+    if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined" && typeof ScrollSmoother !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        if (ScrollSmoother.get()) {
+            ScrollSmoother.get().kill();
+        }
+
+        window.smoother = ScrollSmoother.create({
+            wrapper: "#smooth-wrapper",
+            content: "#smooth-content",
+            smooth: 1.4,          // Smooth inertia duration
+            effects: true,        // Parallax speed & lag support
+            smoothTouch: 0.1,     // Light smoothing on touch devices
+            normalizeScroll: false // Prevents address bar bouncing
+        });
+
+        ScrollTrigger.refresh();
+    }
+});
+</script>
+
+<!-- Interactive Inverting 3D Particle Sphere Script -->
+<script>
+(function () {
+  // Mobile / tablet screen check
+  if (window.innerWidth < 992) return;
+
+  class NebulaSphere {
+    constructor(canvasId, options = {}) {
+      this.canvas = document.getElementById(canvasId);
+      if (!this.canvas) return;
+
+      this.config = {
+        particleCount: 3500,
+        baseRadius: 620,
+        interactionRadius: 140,
+        warpStrength: 40,
+        rotationSpeed: 0.2,
+        disableInteractions: false,
+        ...options
+      };
+
+      this.ctx = this.canvas.getContext("2d");
+      this.particles = [];
+      this.mouse = { x: 0, y: 0, isActive: false };
+
+      this.SPRING = 0.05;
+      this.FRICTION = 0.01;
+      this.Z_PERSPECTIVE = 800;
+
+      this._isReady = false;
+
+      this.bindEvents();
+      this.safeInit();
+    }
+
+    resize() {
+      const parent = this.canvas.parentElement;
+      if (!parent) return false;
+
+      const width = parent.clientWidth;
+      const height = parent.clientHeight;
+
+      if (!width || !height) return false;
+
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+      this.canvas.width = Math.floor(width * dpr);
+      this.canvas.height = Math.floor(height * dpr);
+      this.canvas.style.width = width + "px";
+      this.canvas.style.height = height + "px";
+
+      return true;
+    }
+
+    safeInit() {
+      if (!this.resize()) {
+        setTimeout(() => this.safeInit(), 100);
+        return;
+      }
+
+      this._isReady = true;
+      this.initParticles();
+      this.animate();
+    }
+
+    initParticles() {
+      this.particles = [];
+      const { particleCount, baseRadius } = this.config;
+
+      for (let i = 0; i < particleCount; i++) {
+        const phi = Math.acos(1 - 2 * (i + 0.5) / particleCount);
+        const theta = Math.PI * (1 + Math.sqrt(5)) * i;
+
+        const x = baseRadius * Math.sin(phi) * Math.cos(theta);
+        const y = baseRadius * Math.sin(phi) * Math.sin(theta);
+        const z = baseRadius * Math.cos(phi);
+
+        this.particles.push({
+          baseX: x, baseY: y, baseZ: z,
+          x: x, y: y, z: z,
+          vx: 0, vy: 0, vz: 0,
+          size: Math.random() * 2.2 + 0.8,
+          alpha: Math.random() * 0.5 + 0.5
+        });
+      }
+    }
+
+    bindEvents() {
+      window.addEventListener("resize", () => {
+        if (!this._isReady) return;
+        this.resize();
+      });
+
+      const onMove = (e) => {
+        if (!this._isReady) return;
+
+        const rect = this.canvas.getBoundingClientRect();
+        const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+        const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+
+        this.mouse.x = clientX - rect.left;
+        this.mouse.y = clientY - rect.top;
+        this.mouse.isActive = true;
+      };
+
+      const onLeave = () => { this.mouse.isActive = false; };
+
+      // Track mouse events across the entire hero banner section
+      const banner = document.querySelector('.banner-one') || this.canvas;
+      banner.addEventListener("mousemove", onMove);
+      banner.addEventListener("touchmove", onMove, { passive: true });
+      banner.addEventListener("mouseleave", onLeave);
+      banner.addEventListener("touchend", onLeave);
+    }
+
+    animate() {
+      if (!this._isReady) return;
+
+      const width = this.canvas.width;
+      const height = this.canvas.height;
+      const cx = width / 2;
+
+      // Position sphere curve rising up from bottom
+      let cy = height * 1.15;
+      if (height > 900) cy = height * 1.08;
+      else if (height > 750) cy = height * 1.25;
+      else cy = height * 1.35;
+
+      // Clear with true transparent alpha
+      this.ctx.clearRect(0, 0, width, height);
+
+      const time = Date.now() * 0.001 * this.config.rotationSpeed;
+
+      this.particles.forEach(p => {
+        let tx = p.baseX * Math.cos(time) - p.baseZ * Math.sin(time);
+        let tz = p.baseX * Math.sin(time) + p.baseZ * Math.cos(time);
+        let ty = p.baseY;
+
+        if (this.mouse.isActive && !this.config.disableInteractions) {
+          const mouseRelX = this.mouse.x * (width / this.canvas.offsetWidth) - cx;
+          const mouseRelY = this.mouse.y * (height / this.canvas.offsetHeight) - cy;
+
+          const rotX = mouseRelY * 0.0001;
+          const rotY = mouseRelX * 0.0001;
+
+          let mx = tx * Math.cos(rotY) - tz * Math.sin(rotY);
+          let mz = tx * Math.sin(rotY) + tz * Math.cos(rotY);
+          tx = mx; tz = mz;
+
+          let my = ty * Math.cos(rotX) - tz * Math.sin(rotX);
+          mz = ty * Math.sin(rotX) + tz * Math.cos(rotX);
+          ty = my; tz = mz;
+        }
+
+        p.vx += (tx - p.x) * this.SPRING;
+        p.vy += (ty - p.y) * this.SPRING;
+        p.vz += (tz - p.z) * this.SPRING;
+
+        const scale = this.Z_PERSPECTIVE / (this.Z_PERSPECTIVE + p.z);
+        const sx = cx + p.x * scale;
+        const sy = cy + p.y * scale;
+
+        if (this.mouse.isActive && !this.config.disableInteractions) {
+          const dx = sx - this.mouse.x * (width / this.canvas.offsetWidth);
+          const dy = sy - this.mouse.y * (height / this.canvas.offsetHeight);
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < this.config.interactionRadius) {
+            const force = (this.config.interactionRadius - dist) / this.config.interactionRadius;
+            const angle = Math.atan2(dy, dx);
+            const str = this.config.warpStrength;
+
+            p.vx += Math.cos(angle) * force * str;
+            p.vy += Math.sin(angle) * force * str;
+            p.vz -= force * str * 0.5;
+          }
+        }
+
+        p.x += p.vx; p.y += p.vy; p.z += p.vz;
+        p.vx *= this.FRICTION; p.vy *= this.FRICTION; p.vz *= this.FRICTION;
+
+        const finalScale = this.Z_PERSPECTIVE / (this.Z_PERSPECTIVE + p.z);
+        if (finalScale > 0) {
+          const alpha = Math.min(1, Math.max(0.15, finalScale * p.alpha));
+          this.ctx.beginPath();
+          this.ctx.arc(sx, sy, p.size * finalScale, 0, Math.PI * 2);
+          
+          // Pure white particles with calculated alpha (inverts intersecting white text to black via mix-blend-mode: difference)
+          this.ctx.fillStyle = `rgba(255, 255, 255, ${alpha})`;
+          this.ctx.fill();
+        }
+      });
+
+      requestAnimationFrame(() => this.animate());
+    }
+  }
+
+  // Initialize the hero sphere
+  new NebulaSphere("nebula-canvas");
+})();
+</script>
+</body>
+
+<!-- Mirrored from https://demoxml.com/html/montek-demo/ by HTTrack Website Copier/3.x [XR&CO], Tue, 20 Oct 2026 04:07:21 GMT -->
+</html>

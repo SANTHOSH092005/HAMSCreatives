@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>HAMS Creatives | Contact Us</title>
+<!-- Stylesheets -->
+<link href="assets/css/bootstrap.css" rel="stylesheet">
+<link href="assets/css/style.css" rel="stylesheet">
+<link href="assets/css/responsive.css" rel="stylesheet">
+
+<link href="../../../fonts.googleapis.com/css260f4.css?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,600;1,700&amp;display=swap" rel="stylesheet">
+<link href="../../../fonts.googleapis.com/css2eeaf.css?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet">
+
+<link rel="shortcut icon" href="assets/images/favicon.jpeg" type="image/x-icon">
+<link rel="icon" href="assets/images/favicon.jpeg" type="image/x-icon">
+
+<!-- Responsive -->
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+<style>
+::selection {
+    background-color: #000000;
+    color: #ffffff;
+    -webkit-text-fill-color: #ffffff;
+}
+
+/* ScrollSmoother Viewport & Content Structural Layout */
+#smooth-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+#smooth-content {
+    width: 100%;
+    overflow: visible;
+}
+
+/* Fixed Header & Navigation on top of smooth scroll */
+.main-header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.mobile-menu {
+    z-index: 1000;
+}
+
+/* AJAX notification message styling */
+.form-status {
+    display: none;
+    padding: 14px 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+.form-status.success {
+    display: block;
+    background: rgba(40, 167, 69, 0.2);
+    border: 1px solid #28a745;
+    color: #4cd964;
+}
+.form-status.error {
+    display: block;
+    background: rgba(220, 53, 69, 0.2);
+    border: 1px solid #dc3545;
+    color: #ff6b6b;
+}
+.submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+</style>
+</head>
+
+<body>
+
+<!-- ScrollSmoother Wrappers -->
+<div id="smooth-wrapper">
+    <div id="smooth-content">
+
+        <div class="page-wrapper image-layer" style="background-image:url(assets/images/background/4.jpg)">
+
+            <!-- Main Header -->
+            <header class="main-header">
+                
+                <!-- Header Lower -->
+                <div class="header-lower">
+                    <div class="auto-container">
+                        <div class="inner-container">
+                            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                                
+                                <div class="logo-box">
+                                    <div class="logo"><a href="index.html"><img src="assets/images/logo.png" alt="" title=""></a></div>
+                                </div>
+                                
+                                <div class="nav-outer d-flex flex-wrap">
+                                    <!-- Main Menu -->
+                                    <nav class="main-menu navbar-expand-md">
+                                        <div class="navbar-header">
+                                            <!-- Toggle Button -->      
+                                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                                <span class="icon-bar"></span>
+                                            </button>
+                                        </div>
+                                        
+                                        <div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
+                                            <ul class="navigation clearfix">
+                                                <li><a href="index.html">Home</a></li>
+                                                <li><a href="about.html">About</a></li>
+                                                <li><a href="contact.html">Contact</a></li>
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </div>
+
+                                <!-- Mobile Navigation Toggler -->
+                                <div class="mobile-nav-toggler">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 6l16 0" /><path d="M4 12l16 0" /><path d="M4 18l16 0" /></svg>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--End Header Lower-->
+                
+                <!-- Mobile Menu  -->
+                <div class="mobile-menu">
+                    <div class="menu-backdrop"></div>
+                    <div class="close-btn"><span class="icon fa-solid fa-xmark fa-fw"></span></div>
+                    
+                    <nav class="menu-box">
+                        <div class="nav-logo"><a href="index.html"><img src="assets/images/mobile-logo.png" alt="" title=""></a></div>
+                        <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript--></div>
+                    </nav>
+                </div>
+                <!-- End Mobile Menu -->
+            
+            </header>
+            <!-- End Main Header -->
+            
+            <!-- Page Title -->
+            <section class="page-title">
+                <div class="auto-container">
+                    <h1 class="page-title_heading">Contact</h1>
+                    <div class="page-title_text">Reach Out, Let's Collaborate</div>
+                </div>
+            </section>
+            <!-- End Page Title -->
+
+            <!-- Contact One -->
+            <section class="contact-one">
+                <div class="auto-container">
+                    <div class="row clearfix">
+                        
+                        <!-- Info Column -->
+                        <div class="contact-one_info-column col-lg-6 col-md-6 col-sm-12">
+                            <div class="contact-one_info-outer">
+                                <h2 class="contact-one_heading">We're dedicated to empowering individuals and businesses alike. Let's explore opportunities together.</h2>
+                                <ul class="contact-one_list">
+                                    <li>Nilakkottai, Dindigul District, Tamil Nadu – 624208</li>
+                                    <li><a href="tel:+919751057028">+91 9751057028</a></li>
+                                    <li><a href="mailto:hello@hamscreatives.studio">hello@hamscreatives.studio</a></li>
+                                </ul>
+                                <ul class="contact-one_socials">
+                                    <li><a href="https://www.linkedin.com/in/hamscreatives/?isSelfProfile=false">LinkedIn <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                    <li><a href="https://www.instagram.com/hams_creatives?obrf=ejF0NjRlOXBrYTcz&utm_source=qr">Instagram <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Form Column -->
+                        <div class="contact-one_form-column col-lg-6 col-md-6 col-sm-12">
+                            <div class="contact-one_form-outer">
+                                <h3>Drop us a line</h3>
+                                
+                                <!-- Contact Form -->
+                                <div class="contact-form">
+                                    <!-- Feedback alert message -->
+                                    <div id="form-status" class="form-status"></div>
+
+                                    <form method="post" action="https://formspree.io/f/mdeavvdk" id="contact-form">
+                                        <div class="row clearfix">
+                                            
+                                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                                <input type="text" name="name" placeholder="Your Name" required>
+                                            </div>
+                                            
+                                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                                <input type="email" name="email" placeholder="Email Address" required>
+                                            </div>
+                                            
+                                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                                <input type="tel" name="phone" placeholder="Phone Number">
+                                            </div>
+                                            
+                                            <div class="col-lg-6 col-md-6 col-sm-12 form-group">
+                                                <input class="text" type="text" name="subject" placeholder="Subject" required>
+                                            </div>
+                                            
+                                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                                <textarea name="message" placeholder="Your Message" required></textarea>
+                                            </div>
+                                            
+                                            <div class="col-lg-12 col-md-12 col-sm-12 form-group">
+                                                <!-- Button Box -->
+                                                <button type="submit" id="submit-btn" class="theme-btn submit-btn">
+                                                    Send Message
+                                                </button>
+                                            </div>
+                                            
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- End Contact Form -->
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <!-- End Contact One -->
+            
+            <!-- Main Footer -->
+            <footer class="main-footer">
+                <div class="auto-container">
+                    <!-- Widgets Section -->
+                    <div class="widgets-section">
+                        <div class="row clearfix">
+                            
+                            <div class="footer-column col-lg-8 col-md-12 col-sm-12">
+                                <div class="footer-text">Let's grab some coffee. <br> We're nestled in the heart of a bustling metropolis <br> but occasionally venture to the tranquil countryside</div>
+                                <h2>Interested in working with us? <a href="mailto:hello@hamscreatives.studio">hello@hamscreatives.studio</a></h2>
+                                <ul class="footer_socials">
+                                    <li><a href="https://www.linkedin.com/in/hamscreatives/?isSelfProfile=false">LinkedIn <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                    <li><a href="https://www.instagram.com/hams_creatives?obrf=ejF0NjRlOXBrYTcz&utm_source=qr">Instagram <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                            <div class="footer-column col-lg-4 col-md-12 col-sm-12">
+                                <ul class="footer_navs">
+                                    <li><a href="index.html">Home <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                    <li><a href="about.html">About <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                    <li><a href="contact.html">Contact <i class="fa-solid fa-arrow-right fa-fw"></i></a></li>
+                                </ul>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="auto-container">
+                        <div class="d-flex justify-content-between align-items-center flex-wrap">
+                            <div class="footer_copyright">&copy; 2026 HAMS Creatives &nbsp;-&nbsp; Made by CTRL Developer's</div>
+                            <a class="backtop down-box scroll-to-target" data-target=".page-wrapper">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- End Main Footer -->
+            
+        </div>
+        <!-- End PageWrapper -->
+
+    </div>
+    <!-- End Smooth Content -->
+</div>
+<!-- End Smooth Wrapper -->
+
+<!-- Scripts -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/appear.js"></script>
+<script src="assets/js/wow.js"></script>
+<script src="assets/js/swiper.min.js"></script>
+<script src="assets/js/odometer.js"></script>
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/ScrollToPlugin.min.js"></script>
+<script src="assets/js/ScrollSmoother.min.js"></script>
+<script src="assets/js/script.js"></script>
+<!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+<!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+<!-- ScrollSmoother Initialization Script -->
+<script>
+window.addEventListener("load", function () {
+    if (typeof gsap !== "undefined" && typeof ScrollTrigger !== "undefined" && typeof ScrollSmoother !== "undefined") {
+        gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+
+        if (ScrollSmoother.get()) {
+            ScrollSmoother.get().kill();
+        }
+
+        window.smoother = ScrollSmoother.create({
+            wrapper: "#smooth-wrapper",
+            content: "#smooth-content",
+            smooth: 1.4,          // Smooth inertia duration
+            effects: true,        // Parallax speed & lag support
+            smoothTouch: 0.1,     // Light smoothing on touch devices
+            normalizeScroll: false // Prevents address bar bouncing
+        });
+
+        ScrollTrigger.refresh();
+    }
+});
+</script>
+
+<!-- Formspree AJAX Form Handler Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const contactForm = document.getElementById("contact-form");
+    const statusBox = document.getElementById("form-status");
+    const submitBtn = document.getElementById("submit-btn");
+
+    if (contactForm) {
+        contactForm.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            // Set loading state
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Sending...";
+            statusBox.className = "form-status";
+            statusBox.style.display = "none";
+
+            const formData = new FormData(contactForm);
+
+            try {
+                // Post directly to Formspree endpoint from the form's action attribute
+                const response = await fetch(contactForm.action, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                });
+
+                if (response.ok) {
+                    statusBox.className = "form-status success";
+                    statusBox.textContent = "Thank you! Your message has been sent successfully.";
+                    statusBox.style.display = "block";
+                    contactForm.reset();
+                    
+                    // Refresh ScrollSmoother layout if height changes
+                    if (typeof ScrollTrigger !== "undefined") {
+                        ScrollTrigger.refresh();
+                    }
+                } else {
+                    const data = await response.json();
+                    if (data && data.errors && data.errors.length > 0) {
+                        throw new Error(data.errors.map(error => error.message).join(", "));
+                    } else {
+                        throw new Error("Unable to submit form. Please check the fields and try again.");
+                    }
+                }
+            } catch (err) {
+                statusBox.className = "form-status error";
+                statusBox.textContent = err.message || "Connection error. Please try again or email us directly.";
+                statusBox.style.display = "block";
+                
+                if (typeof ScrollTrigger !== "undefined") {
+                    ScrollTrigger.refresh();
+                }
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "Send Message";
+            }
+        });
+    }
+});
+</script>
+
+</body>
+</html>
